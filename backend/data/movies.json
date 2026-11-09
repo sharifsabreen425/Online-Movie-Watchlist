@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "salaar",
+    "genre": "Action",
+    "description": null,
+    "watched": false
+  },
+  {
+    "id": 2,
+    "title": "MAD",
+    "genre": "Comedy",
+    "description": null,
+    "watched": false
+  },
+  {
+    "id": 3,
+    "title": "kanchana",
+    "genre": "Horror",
+    "description": null,
+    "watched": true
+  },
+  {
+    "id": 4,
+    "title": "Remo",
+    "genre": "Romance",
+    "description": null,
+    "watched": false
+  },
+  {
+    "id": 5,
+    "title": "Bahubali",
+    "genre": "Thriller",
+    "description": null,
+    "watched": false
+  },
+  {
+    "id": 6,
+    "title": "Hidden Love",
+    "genre": "Drama",
+    "description": null,
+    "watched": true
+  },
+  {
+    "id": 7,
+    "title": "darling",
+    "genre": "Romance",
+    "description": null,
+    "watched": true
+  },
+  {
+    "id": 8,
+    "title": "jailor",
+    "genre": "Thriller",
+    "description": null,
+    "watched": true
+  },
+  {
+    "id": 9,
+    "title": "julayi",
+    "genre": null,
+    "description": null,
+    "tmdbId": null,
+    "releaseDate": null,
+    "runtime": null,
+    "rating": null,
+    "director": null,
+    "cast": [],
+    "poster": null,
+    "backdrop": null,
+    "watched": false
+  },
+  {
+    "id": 10,
+    "title": "julayi",
+    "genre": "Thriller",
+    "description": "The story revolves around Bittu, a clever and intelligent young man who gets involved in a dangerous conflict with a ruthless criminal after a bank robbery. Using his intelligence, confidence, and quick thinking, he tries to defeat the villain and protect himself and others",
+    "tmdbId": null,
+    "releaseDate": null,
+    "runtime": null,
+    "rating": null,
+    "director": null,
+    "cast": [],
+    "poster": null,
+    "backdrop": null,
+    "watched": false
+  },
+  {
+    "id": 11,
+    "title": "salaar",
+    "genre": null,
+    "description": null,
+    "shortDescription": "",
+    "tmdbId": null,
+    "releaseDate": null,
+    "runtime": null,
+    "rating": null,
+    "director": null,
+    "cast": [],
+    "leadCast": [],
+    "poster": null,
+    "backdrop": null,
+    "watched": false
+  },
+  {
+    "id": 12,
+    "title": "manam",
+    "genre": null,
+    "description": null,
+    "shortDescription": "",
+    "tmdbId": null,
+    "releaseDate": null,
+    "runtime": null,
+    "rating": null,
+    "director": null,
+    "cast": [],
+    "leadCast": [],
+    "poster": null,
+    "backdrop": null,
+    "watched": false
+  }
+]

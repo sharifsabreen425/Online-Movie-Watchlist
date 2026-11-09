@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Movie Watchlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 My Movie Watchlist</h1>
+    <p>Save movies you want to watch</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Add a Movie</h2>
+      <form id="movieForm">
+        <div class="autocomplete">
+          <input id="title" placeholder="Type a movie name to search..." maxlength="100" required
+            autocomplete="off" role="combobox" aria-autocomplete="list"
+            aria-controls="suggestions" aria-expanded="false">
+          <div id="suggestions" class="suggestions" role="listbox" hidden></div>
+        </div>
+        <p class="search-hint">Choose a movie suggestion to load its cast and details automatically.</p>
+        <div id="moviePreview" class="movie-preview" aria-live="polite" hidden>
+          <img id="previewPoster" alt="">
+          <div id="previewDetails"></div>
+        </div>
+        <input id="genre" placeholder="Genre" maxlength="50" aria-label="Genre">
+        <textarea id="description" placeholder="Movie overview" maxlength="1000" rows="3"></textarea>
+        <button type="submit">＋ Add Movie</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="toolbar">
+      <input id="search" placeholder="Search by movie title..." aria-label="Search movies">
+      <select id="filter" aria-label="Filter by watch status">
+        <option value="All">All movies</option>
+        <option value="Watched">Watched</option>
+        <option value="Not Watched">Not watched</option>
+      </select>
+      <select id="genreFilter" aria-label="Filter by genre">
+        <option value="All">All genres</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Your Watchlist</h2>
+      <div id="movieList" class="movie-grid"></div>
+    </section>
+  </main>
+  <footer>This product uses the <a href="https://www.themoviedb.org/" target="_blank" rel="noreferrer">TMDb API</a> but is not endorsed or certified by TMDb.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
