@@ -2,14 +2,20 @@ ONLINE MOVIE WATCHLIST
 
 Requirements:
 - Node.js 18 or later
-- A free TMDb API key for automatic movie search and details
+- A free TMDb API key for automatic movie search and details (optional)
 - VS Code
 
-1. Start the backend:
-   Get an API key from https://www.themoviedb.org/settings/api.
-   Open PowerShell in the backend folder, set the key, then start the server:
-       $env:TMDB_API_KEY="your_tmdb_api_key"
+1. Configure and start the backend:
+   For TMDb search and automatic movie details, request an API key at
+   https://www.themoviedb.org/settings/api.
+   From the project folder, copy the example and replace the placeholder in
+   backend/.env:
+       Copy-Item .\backend\.env.example .\backend\.env
+       notepad .\backend\.env
+   Then open PowerShell in the backend folder and start the server:
        node server.js
+   The .env file is local and ignored by Git; never commit or share your key.
+   The watchlist API works without a TMDb key, but movie search and details do not.
 
 2. Run the frontend:
    Open frontend/index.html with VS Code Live Server.

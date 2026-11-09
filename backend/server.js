@@ -1,6 +1,44 @@
 const http = require("node:http");
+const { readFileSync } = require("node:fs");
 const fs = require("node:fs/promises");
 const path = require("node:path");
+
+function loadEnvironmentFile() {
+  const envFile = path.join(__dirname, ".env");
+  let contents;
+
+  try {
+    contents = readFileSync(envFile, "utf8");
+  } catch (error) {
+    if (error.code === "ENOENT") return;
+    throw error;
+  }
+
+  for (const [index, line] of contents.split(/\r?\n/).entries()) {
+    const entry = line.trim();
+    if (!entry || entry.startsWith("#")) continue;
+
+    const separator = entry.indexOf("=");
+    const name = separator < 0 ? "" : entry.slice(0, separator).trim();
+    if (separator < 1 || !/^[A-Za-z_][A-Za-z0-9_]*$/.test(name)) {
+      throw new Error(`Invalid backend .env entry on line ${index + 1}.`);
+    }
+
+    if (process.env[name] !== undefined) continue;
+
+    let value = entry.slice(separator + 1).trim();
+    const quote = value[0];
+    if (quote === '"' || quote === "'") {
+      if (value.length < 2 || value[value.length - 1] !== quote) {
+        throw new Error(`Unclosed quote in backend .env entry on line ${index + 1}.`);
+      }
+      value = value.slice(1, -1);
+    }
+    process.env[name] = value;
+  }
+}
+
+loadEnvironmentFile();
 
 const PORT = Number(process.env.PORT || 8080);
 const DATA_DIRECTORY = path.join(__dirname, "data");
